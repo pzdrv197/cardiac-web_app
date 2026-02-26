@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的運動計畫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <!-- 主頁面 -->
+        <div id="main-page" class="container">
+            <h1>運動計畫管理</h1>
+            <div class="button-group">
+                <button onclick="showViewPage()">See my ex plan</button>
+                <button onclick="enterEditMode()">Edit my ex plan</button>
+            </div>
+        </div>
+
+        <!-- 查看頁面 -->
+        <div id="view-page" class="container hidden">
+            <h2>我的運動計畫</h2>
+            <div id="plan-display" class="grid"></div>
+            <button onclick="showMainPage()">返回主頁</button>
+        </div>
+
+        <!-- 編輯頁面 -->
+        <div id="edit-page" class="container hidden">
+            <h2>編輯運動計畫</h2>
+            <div id="exercise-list" class="grid"></div>
+            <div class="button-group">
+                <button class="save-btn" onclick="savePlan()">儲存計畫</button>
+                <button onclick="showMainPage()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
